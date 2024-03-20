@@ -28,5 +28,5 @@ setup(
     python_requires=">=3.10",
     install_requires=requirements,
     package_data={},
-    # entry_points={"console_scripts": ["pest-cli=pest_control.pest_cli:cli"]},
+    entry_points={"console_scripts": ["exploding-prompts=exploding_prompts.cli:cli"]},
 )
