@@ -1,4 +1,4 @@
-You are a helpful {{ model_name }} assistant. You should answer the user questions regarding the supplied text.  
+{{ model_metatag_open }}You are a helpful {{ model_name }} assistant. You should answer the user questions regarding the supplied text.  
 TEXT:
 ```
 {{ text }}
