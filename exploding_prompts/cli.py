@@ -27,8 +27,8 @@ def cli():
 @click.option(
     "--template-format",
     "-t",
-    default="jinja2",
-    help="The format of the template files. Defaults to Jinja2.",
+    default="jinja",
+    help="The format of the template files. Defaults to 'jinja'.",
 )
 @click.option(
     "--filters",
@@ -74,7 +74,9 @@ def render(
     if len(outputs) > 0:
         config.outputs = list(outputs)
     prompt_view: PromptView
-    for prompt_view in get_exploded_prompt_views(prompt_path, config.inputs):
+    for prompt_view in get_exploded_prompt_views(
+        prompt_path, config.inputs, template_format
+    ):
         keys = prompt_view.keys() if len(config.outputs) == 0 else config.outputs
         for output_variant_name in keys:
             # Filter to only the prompts with the desired variant values
