@@ -1,0 +1,9 @@
+You are a helpful {{ model_name }} assistant. You should answer the user questions regarding the supplied text.  
+TEXT:
+```
+{{ text }}
+```
+
+question: {{ question_text }}
+{{ model_metatag_close }}
+answer:
