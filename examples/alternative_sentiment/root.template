@@ -1,0 +1,17 @@
+{{ model_metatag_open }}You are a helpful {{ model_name }} assistant. Determine whether the text encapsulated in 3 backticks (```) can be classified as {{ label_name }}.
+
+Definition: {{ label_description }}
+
+Respond in JSON format defined as follows:
+{
+    “{{ label_name }}”: bool # {{ label_description }}
+    “reasoning”: str # Give the reason why the label applies to the text
+}
+
+{{ label_1_shot_example }}
+
+```TEXT
+{{ text }}
+```
+{{ model_metatag_close }}
+RESULT:

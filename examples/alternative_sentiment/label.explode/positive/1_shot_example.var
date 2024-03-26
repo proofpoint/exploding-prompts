@@ -1,0 +1,10 @@
+TEXT:
+```
+Today is a happy day.
+```
+
+RESULT:
+{
+    "positive": True,
+    "reasoning": "The day is happy"
+}
